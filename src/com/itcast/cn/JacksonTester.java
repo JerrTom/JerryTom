@@ -12,8 +12,10 @@ public class JacksonTester {
 		ObjectMapper mapper = new ObjectMapper();
 		String jsonString = "{\"name\":\"jinxin\",\"age\":\"25\"}";
 		try {
+			//将json字符串序列化成POJO类
 			Student s = mapper.readValue(jsonString, Student.class);
 			System.out.println(s.toString());
+			//将POJO类转换成json字符串
 			String jsonstring = mapper.writeValueAsString(s);
 			System.out.println(jsonstring);
 		} catch (JsonParseException e) {
