@@ -13,7 +13,7 @@ public class JacksonTester {
 		String jsonString = "{\"name\":\"jinxin\",\"age\":\"25\"}";
 		try {
 			//将json字符串序列化成POJO类。
-			Student s = mapper.readValue(jsonString, Student.class);
+			Emp s = mapper.readValue(jsonString, Emp.class);
 			System.out.println(s.toString());
 			//将POJO类转换成json字符串。
 			String jsonstring = mapper.writeValueAsString(s);
@@ -26,26 +26,5 @@ public class JacksonTester {
 			e.printStackTrace();
 		}
 		
-	}
-}
-class Student{
-	private String name;
-	private int age;
-	//public Student() {};
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	@Override
-	public String toString() {
-		return "Student [name=" + name + ", age=" + age + "]";
 	}
 }
