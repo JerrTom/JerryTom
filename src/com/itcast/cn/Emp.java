@@ -4,7 +4,10 @@ public class Emp {
 
 	   private String name;
 	   private int age;
-	   public Emp(){}
+	   public Emp(){
+		   
+	   }
+	   
 	   public String getName() {
 	      return name;
 	   }
