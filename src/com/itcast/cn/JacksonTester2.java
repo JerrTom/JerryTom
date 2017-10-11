@@ -9,6 +9,7 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
 /**
+ * jackson全数据类型绑定
  * 将Java对象序列化到一个JSON文件，然后再读取JSON文件获取转换为对象。
  * @author JINXIN
  *
