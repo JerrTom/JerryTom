@@ -7,6 +7,9 @@ public class UserData {
 	private String name;
 	private int[] ins;
 	
+	public UserData(){
+		
+	}
 	public Emp getEmp() {
 		return emp;
 	}

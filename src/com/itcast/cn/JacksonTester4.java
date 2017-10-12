@@ -20,19 +20,20 @@ public class JacksonTester4 {
 		Emp e = new Emp();
 		e.setName("jerry");
 		e.setAge(45);
+		
 		userdata.setEmp(e);
 		userdata.setName("Tom");
 		userdata.setVerified(Boolean.FALSE);
 		userdata.setIns(marks);
 		
-		TypeReference<UserData> ref = new TypeReference<UserData>() {
-		};
-		userDataMap.put("userDataMap", userdata);
+		TypeReference<UserData> ref = new TypeReference<UserData>() { };
+		userDataMap.put("userData1", userdata);
 		
 		try {
 			mapper.writeValue(new File("emp1.json"), userDataMap);
-			Map m = mapper.readValue(new File("emp1.json"), ref);
-			System.out.println(m.get("userDataMap"));
+			//ERROR
+			userDataMap = mapper.readValue(new File("emp1.json"), ref);
+			System.out.println(((UserData) userDataMap.get("userData1")).getName());
 			
 			
 		} catch (JsonGenerationException e1) {
