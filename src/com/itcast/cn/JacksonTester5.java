@@ -11,6 +11,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 public class JacksonTester5 {
 
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
